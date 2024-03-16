@@ -9,12 +9,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 echo "source ${ZSH_CUSTOM:-~}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZSH_CUSTOM:-~}/.zshrc
 
-source zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${ZSH_CUSTOM:-~}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #Edit ZSH config file
-sed -i 's\ZSH_THEME="robbyrussell"\ZSH_THEME="powerlevel10k/powerlevel10k"\' .zshrc
+sed -i 's\ZSH_THEME="robbyrussell"\ZSH_THEME="powerlevel10k/powerlevel10k"\' ${ZSH_CUSTOM:-~}/.zshrc
 
-sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' .zshrc
+sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ${ZSH_CUSTOM:-~}/.zshrc
 
 #Restart ZSH and set up
 exec zsh
