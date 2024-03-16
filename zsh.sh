@@ -12,14 +12,14 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
  
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "source ${ZSH_CUSTOM:-$HOME}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZSH_CUSTOM:-$HOME}/.zshrc
 
 source zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #Edit ZSH config file
-sed -i 's\ZSH_THEME="robbyrussell"\ZSH_THEME="powerlevel10k/powerlevel10k"\' .zshrc
+sed -i 's\ZSH_THEME="robbyrussell"\ZSH_THEME="powerlevel10k/powerlevel10k"\' /root/.zshrc
 
-sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' .zshrc
+sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' /root/.zshrc
 
 #Restart ZSH and set up
 exec zsh
