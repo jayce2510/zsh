@@ -16,8 +16,6 @@ sed -i 's\ZSH_THEME="robbyrussell"\ZSH_THEME="powerlevel10k/powerlevel10k"\' ${Z
 
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ${ZDOTDIR:-$HOME}/.zshrc
 
-echo "(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES" >> ${ZDOTDIR:-$HOME}/.zshrc
-
 echo "ZSH_HIGHLIGHT_STYLES[path]=none" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 echo "ZSH_HIGHLIGHT_STYLES[path_prefix]=none" >> ${ZDOTDIR:-$HOME}/.zshrc
