@@ -7,7 +7,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/zsh-syntax-highlighting
 
-echo "source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\n" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 source ${ZSH_CUSTOM:-~}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -16,9 +16,9 @@ sed -i 's\ZSH_THEME="robbyrussell"\ZSH_THEME="powerlevel10k/powerlevel10k"\' ${Z
 
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ${ZDOTDIR:-$HOME}/.zshrc
 
-echo "ZSH_HIGHLIGHT_STYLES[path]=none" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo -e "ZSH_HIGHLIGHT_STYLES[path]=none\n" >> ${ZDOTDIR:-$HOME}/.zshrc
 
-echo "ZSH_HIGHLIGHT_STYLES[path_prefix]=none" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo -e "ZSH_HIGHLIGHT_STYLES[path_prefix]=none\n" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 #Restart ZSH and set up
 exec zsh
