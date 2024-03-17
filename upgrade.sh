@@ -7,7 +7,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/zsh-syntax-highlighting
 
-echo "source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\n" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo -e "\n""source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\n" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 source ${ZSH_CUSTOM:-~}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
