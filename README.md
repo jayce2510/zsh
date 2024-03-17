@@ -6,7 +6,7 @@
 git clone https://github.com/jayce2510/zsh.git && cd zsh && chmod +x install.sh upgrade.sh && ./install.sh
 ```
 
-#### 2. Upgrade with p10k theme & autosuggestions & zsh-syntax-highlighting
+#### 2. Upgrade for adding p10k theme & autosuggestions & zsh-syntax-highlighting
 
 ```sh
 ./upgrade.sh
